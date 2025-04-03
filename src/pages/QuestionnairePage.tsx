@@ -12,95 +12,109 @@ const QuestionnairePage = () => {
   const totalSteps = 4;
 
   const questionGroups = [
-    // Step 1: Basic Information
+    // Step 1: Community and Collaboration
     [
       {
-        id: "name",
-        question: "What is your name? (Optional)",
-        type: "text"
+        id: "collaboration",
+        question: "I believe that collaboration is essential for solving complex problems.",
+        type: "likert"
       },
       {
-        id: "email",
-        question: "What email address can we use to contact you if selected for the airdrop?",
-        type: "email"
+        id: "radical_acceptance",
+        question: "You are invited to a celebration or ceremony from a religious tradition that is unfamiliar to you. How would you approach the situation?",
+        type: "multiple",
+        options: [
+          "Decline the invitation; I'm not comfortable with unfamiliar religions.",
+          "Attend, but keep to myself and observe quietly.",
+          "Attend and ask respectful questions to learn more about the tradition.",
+          "Do some research beforehand to understand the customs and traditions, and then attend with an open mind.",
+          "Politely decline, explaining that I'm not comfortable, but express my respect for their beliefs."
+        ]
       },
       {
-        id: "interests",
-        question: "What aspects of the Luminary Nexus Community interest you most?",
-        type: "text"
+        id: "equal_opportunity",
+        question: "What does the phrase 'equal opportunity' mean to you?",
+        type: "textarea"
       },
       {
-        id: "background",
-        question: "What relevant skills, experiences, or perspectives would you bring to the community?",
+        id: "helping_friend",
+        question: "Imagine a close friend or family member is going through a difficult time (e.g., job loss, illness, personal crisis). How would you offer your support?",
         type: "textarea"
       }
     ],
-    // Step 2: Values Alignment
+    // Step 2: Technology and the Future
     [
       {
-        id: "sustainability",
-        question: "How important is environmental sustainability to you in your daily life? (1-5)",
+        id: "emerging_tech",
+        question: "What emerging technology are you most excited about, and why?",
+        type: "textarea"
+      },
+      {
+        id: "tech_evaluation",
+        question: "New technologies should be carefully evaluated for their potential social and environmental impacts before being widely adopted.",
         type: "likert"
       },
       {
-        id: "tech_ethics",
-        question: "How concerned are you about the ethical implications of advancing technology? (1-5)",
-        type: "likert"
+        id: "ai_interaction",
+        question: "How do you feel about interacting with increasingly intelligent machines in your daily life?",
+        type: "textarea"
       },
       {
-        id: "community",
-        question: "How much do you value being part of a collaborative community? (1-5)",
-        type: "likert"
-      },
-      {
-        id: "personal_growth",
-        question: "How important is continuous personal growth and learning to you? (1-5)",
-        type: "likert"
+        id: "new_ideas",
+        question: "You encounter a new idea that challenges your existing beliefs. How do you typically respond?",
+        type: "multiple",
+        options: [
+          "Dismiss it immediately.",
+          "Research it further to understand it better.",
+          "Discuss it with others to get different perspectives.",
+          "Become defensive and argue against it.",
+          "Consider how this new idea might integrate with or change my beliefs."
+        ]
       }
     ],
-    // Step 3: Deeper Questions
+    // Step 3: Personal Values and Actions
     [
       {
-        id: "vision",
-        question: "What does a sustainable, ethical future look like to you?",
+        id: "sustainable_living",
+        question: "What steps, if any, do you take to live more sustainably?",
         type: "textarea"
       },
       {
-        id: "contribution",
-        question: "How do you envision contributing to the Luminary Nexus Community?",
-        type: "textarea"
-      },
-      {
-        id: "ai_views",
-        question: "What are your thoughts on the role of AI in society and communities?",
-        type: "textarea"
-      },
-      {
-        id: "challenge",
-        question: "What do you see as the biggest challenge facing community-building efforts today?",
-        type: "textarea"
-      }
-    ],
-    // Step 4: Final Questions
-    [
-      {
-        id: "token_utility",
-        question: "How would you like to see the LNX token used within the community?",
-        type: "textarea"
-      },
-      {
-        id: "governance",
-        question: "How important is participating in community governance to you? (1-5)",
+        id: "learning",
+        question: "I actively seek out opportunities to learn new things.",
         type: "likert"
       },
       {
-        id: "time_commitment",
-        question: "How much time could you realistically commit to community participation weekly?",
-        type: "text"
+        id: "conflict_resolution",
+        question: "You have a disagreement with a neighbor about a shared resource (e.g., a fence, a parking space). How would you approach resolving the situation?",
+        type: "textarea"
       },
       {
-        id: "additional",
-        question: "Is there anything else you'd like to share with us?",
+        id: "community_rights",
+        question: "What responsibilities do individuals have to uphold the rights and well-being of others in a community?",
+        type: "textarea"
+      }
+    ],
+    // Step 4: Future Vision
+    [
+      {
+        id: "life_purpose",
+        question: "What gives your life meaning and purpose?",
+        type: "textarea"
+      },
+      {
+        id: "ideal_community",
+        question: "Describe your ideal vision of a community in the year 2050.",
+        type: "textarea"
+      },
+      {
+        id: "decentralization",
+        question: "How important is it for individuals to have a voice in decisions that affect their community?",
+        type: "likert"
+      },
+      {
+        id: "community_contribution",
+        question: "Imagine you could design and live in your ideal community. Describe this community, including your ideal role and how you would contribute to its success.",
         type: "textarea"
       }
     ]
@@ -135,7 +149,7 @@ const QuestionnairePage = () => {
     window.scrollTo(0, 0);
   };
 
-  const renderQuestion = (question: { id: string; question: string; type: string }) => {
+  const renderQuestion = (question: { id: string; question: string; type: string; options?: string[] }) => {
     switch (question.type) {
       case "text":
         return (
@@ -185,8 +199,27 @@ const QuestionnairePage = () => {
                   {value}
                 </button>
                 <span className="text-xs mt-1 text-gray-500">
-                  {value === 1 ? "Low" : value === 5 ? "High" : ""}
+                  {value === 1 ? "Strongly Disagree" : value === 2 ? "Disagree" : value === 3 ? "Neutral" : value === 4 ? "Agree" : "Strongly Agree"}
                 </span>
+              </div>
+            ))}
+          </div>
+        );
+      case "multiple":
+        return (
+          <div className="space-y-2 mt-2">
+            {question.options?.map((option, index) => (
+              <div key={index} className="flex items-start">
+                <input
+                  type="radio"
+                  id={`${question.id}_${index}`}
+                  name={question.id}
+                  value={option}
+                  checked={formData[question.id] === option}
+                  onChange={() => handleChange(question.id, option)}
+                  className="mt-1 mr-2"
+                />
+                <label htmlFor={`${question.id}_${index}`} className="text-gray-700">{option}</label>
               </div>
             ))}
           </div>

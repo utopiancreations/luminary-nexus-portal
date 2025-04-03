@@ -21,7 +21,7 @@ const ContactPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    toast.success("Message sent successfully! We'll respond as soon as possible.");
+    toast.success("Message sent successfully! We'll respond within 2-3 business days.");
     setFormData({
       name: "",
       email: "",

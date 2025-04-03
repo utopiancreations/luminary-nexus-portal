@@ -8,28 +8,28 @@ const RoadmapPage = () => {
     {
       phase: "Phase 1",
       title: "Blueprint & Foundation",
-      description: "Development of community vision, values, and initial token distribution to values-aligned members through airdrop. Creation of foundational governance structures and community channels.",
+      description: "Development of community vision, values, and initial token distribution to values-aligned members through airdrop. Creation of foundational governance structures and community channels. Key activities include finalizing architectural designs, developing and auditing LNX token and DAO contracts, and establishing the Ethics Board.",
       isActive: true
     },
     {
       phase: "Phase 2",
       title: "Funding & Community Building",
-      description: "Resource gathering, partnership development, and growing the community. Identification of potential locations and preliminary land assessments. Initial DAO governance activities."
+      description: "Resource gathering, partnership development, and growing the community. Identification of potential locations and preliminary land assessments. Initial DAO governance activities. Focus on promoting community engagement and monitoring organic adoption of the LNX token ecosystem while the treasury accumulates resources.",
     },
     {
       phase: "Phase 3",
-      title: "Construction",
-      description: "Physical development of community infrastructure begins once treasury milestones are reached. Implementation of sustainable systems for energy, food, and waste management."
+      title: "Blueprint Community Construction",
+      description: "Physical development begins once treasury milestones are reached. This phase proceeds in sub-phases triggered by the Community Treasury reaching specific funding goals: Land Acquisition, Foundational Infrastructure (renewable energy, water systems), Core Buildings and Initial Housing, and ongoing Expansion and Amenities.",
     },
     {
       phase: "Phase 4",
       title: "DAO Activation",
-      description: "Transition to fully operational DAO governance. Implementation of on-site community economy. Integration of advanced ethical technology systems."
+      description: "Full governance control transitions from the initial core team to the Luminary Nexus DAO. Formal activation of all governance functions, complete handover of treasury control to DAO smart contracts, and the initial core team transitions to advisory/member roles.",
     },
     {
       phase: "Phase 5",
-      title: "Ongoing Development",
-      description: "Continuous improvement of community systems and expansion based on DAO decisions. Knowledge sharing and potential replication of the model in other locations."
+      title: "Ongoing Development and Expansion",
+      description: "The community operates and evolves under the direction of the DAO. Activities include managing ongoing operations, proposing and voting on new projects, executing the decadal technology refresh cycle, and potential expansion to establish new communities in different locations.",
     }
   ];
 

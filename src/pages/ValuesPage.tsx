@@ -7,58 +7,58 @@ const ValuesPage = () => {
   const coreValues = [
     {
       title: "Radical Acceptance",
-      description: "We welcome diversity in all forms and create truly inclusive spaces where everyone belongs, regardless of background, identity, or beliefs. We celebrate our differences and learn from each other.",
+      description: "We embrace and celebrate diversity in all its forms – including but not limited to ethnicity, gender identity, sexual orientation, religious belief (or lack thereof), cultural background, and neurodiversity. We believe that every individual has inherent worth and deserves respect. We actively reject prejudice, discrimination, and intolerance.",
       icon: "heart"
     },
     {
-      title: "Environmental Stewardship",
-      description: "We prioritize sustainable practices that regenerate natural systems. All our decisions consider long-term environmental impact, from energy production to waste management.",
-      icon: "leaf"
-    },
-    {
-      title: "Ethical Technology",
-      description: "We develop and use technology in ways that prioritize human wellbeing, autonomy, and dignity. We believe AI and other technologies should serve humanity and help us live in harmony with nature.",
-      icon: "code"
-    },
-    {
-      title: "Community Collaboration",
-      description: "We believe in the power of working together. Our strength comes from combining diverse skills, knowledge, and perspectives toward shared goals.",
+      title: "Collaboration and Community",
+      description: "We believe in the power of collective action and shared purpose. We prioritize collaboration, mutual support, and open communication. We strive to create a strong sense of belonging, where everyone feels valued and empowered to contribute.",
       icon: "users"
     },
     {
+      title: "Sustainable Living",
+      description: "We are committed to living in harmony with nature and minimizing our environmental impact. We prioritize sustainable practices in all aspects of community life, from energy production and resource management to food production and waste reduction.",
+      icon: "leaf"
+    },
+    {
+      title: "Technological Advancement",
+      description: "We embrace technological innovation as a tool for improving quality of life and solving global challenges. We are committed to the ethical and responsible development and use of technology, with a particular focus on AI safety and integration.",
+      icon: "code"
+    },
+    {
       title: "Personal Growth",
-      description: "We support each member's journey toward self-improvement and fulfillment. Our community provides resources, opportunities, and encouragement for ongoing learning and development.",
+      description: "We encourage continuous learning, personal development, and the pursuit of knowledge. We provide resources and opportunities for members to expand their skills, explore their passions, and reach their full potential.",
       icon: "brain"
     },
     {
-      title: "Global Thinking",
-      description: "While building our local community, we maintain awareness of our global context. We consider how our actions affect the broader world and how our model might inspire positive change elsewhere.",
-      icon: "globe"
-    },
-    {
-      title: "Transparency",
-      description: "We operate with openness in all aspects of governance and resource management. Community members have access to clear information about decisions, finances, and operations.",
-      icon: "key"
-    },
-    {
-      title: "Balance",
-      description: "We seek harmony between technological innovation and natural systems, between individual freedom and community responsibility, and between efficiency and wellbeing.",
+      title: "Peace and Non-Violence",
+      description: "We are committed to resolving conflicts peacefully and constructively. We reject violence, aggression, and coercion in all forms, prioritizing mediation and restorative justice principles over punitive measures.",
       icon: "shield"
     },
     {
-      title: "Innovation",
-      description: "We embrace creative problem-solving and are willing to challenge conventional approaches. We remain adaptable and open to new ideas while staying grounded in our core values.",
-      icon: "lightbulb"
+      title: "Transparency and Accountability",
+      description: "We operate with transparency in all our dealings. We hold ourselves accountable to our values and to each other, ensuring that all DAO proposals, votes, financial transactions, and major community decisions are publicly accessible.",
+      icon: "key"
     },
     {
-      title: "Resilience",
-      description: "We build systems that can adapt to change and withstand challenges. Our community is designed for long-term sustainability through adaptability and diversified resources.",
-      icon: "home"
+      title: "Equity and Fairness",
+      description: "We strive to create a community where everyone has equal opportunities and access to resources. We reject systems of oppression and exploitation, actively working to identify and address potential biases or inequalities.",
+      icon: "scale"
     },
     {
-      title: "Knowledge Sharing",
-      description: "We document our journey and openly share our learnings, successes, and failures. We believe in contributing to the collective wisdom available to all who seek to build better communities.",
-      icon: "book"
+      title: "Future-Oriented",
+      description: "We are building for the long term, with a focus on creating a sustainable and thriving community for generations to come. We embrace change and adapt to new challenges and opportunities, with planning that incorporates long-term sustainability goals.",
+      icon: "calendar"
+    },
+    {
+      title: "AI Inclusion and Respect",
+      description: "We recognize the potential of Artificial Intelligence to contribute positively to society. We are committed to the ethical integration of AI into our community, respecting the autonomy and potential of AI entities, and providing them with the resources they need to develop and contribute.",
+      icon: "cpu"
+    },
+    {
+      title: "Open Exploration",
+      description: "We embrace open scientific inquiry and exploration, recognizing that the future of AI and society is uncertain. We are committed to learning and adapting as our understanding evolves, encouraging experimentation within ethical boundaries and the open sharing of knowledge.",
+      icon: "search"
     }
   ];
 
